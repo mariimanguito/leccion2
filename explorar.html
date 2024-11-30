@@ -3,69 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explorar - Pinspire</title>
+    <title>Explorar Ideas - Pinspire</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="explorar-header">
-        <h1>Explorar Ideas</h1>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="explorar.html" class="active">Explorar</a></li>
-                <li><a href="crear.html">Crear</a></li>
-                <li><a href="perfil.html">Perfil</a></li>
-            </ul>
-        </nav>
+    <header>
+            <h1>Explorar</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="explorar.html" class="active">Explorar</a></li>
+                    <li><a href="crear.html">Crear</a></li>
+                    <li><a href="perfil.html">Perfil</a></li>
+                </ul>
+            </nav>
     </header>
 
-    <main class="explorar-page">
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+                <h2>Explora Miles de Ideas</h2>
+                <p>Descubre inspiración para cada aspecto de tu vida, desde proyectos DIY hasta arte, moda y más.</p>
+        </section>
+
         <!-- Filtros -->
-        <section class="filtros">
-            <h2>Filtrar por Categoría</h2>
-            <div class="categorias">
-                <button class="filtro-btn" data-category="diy">Proyectos DIY</button>
-                <button class="filtro-btn" data-category="decoracion">Decoración</button>
-                <button class="filtro-btn" data-category="recetas">Recetas</button>
-                <button class="filtro-btn" data-category="arte">Arte y Diseño</button>
-                <button class="filtro-btn" data-category="moda">Moda</button>
-                <button class="filtro-btn" data-category="fotografia">Fotografía</button>
+        <section>
+            <div>
+                <h3>Filtrar por Categoría</h3>
+                <div class="filter-buttons">
+                    <button data-category="diy">DIY</button>
+                    <button data-category="decoracion">Decoración</button>
+                    <button data-category="recetas">Recetas</button>
+                    <button data-category="moda">Moda</button>
+                    <button data-category="arte">Arte</button>
+                    <button data-category="fotografia">Fotografía</button>
+                </div>
             </div>
         </section>
 
         <!-- Galería -->
-        <section class="masonry-gallery">
-            <!-- Aquí puedes duplicar y agregar más bloques -->
-            <div class="masonry-item" data-category="decoracion">
-                <img src="https://i.pinimg.com/236x/a1/b2/c3/a1b2c3d4e5f6g7h8i9.jpg" alt="Decoración">
-                <div class="overlay">
-                    <p>Decoración para el hogar</p>
+        <section class="gallery">
+            <div class="masonry-grid">
+
+                <!-- Tarjetas -->
+                
+                <div class="masonry-item" data-category="decoracion">
+                    <img src="https://i.pinimg.com/236x/79/15/24/791524cd3bda17edf68edf7c4d3e2515.jpg" alt="Decoración">
+                    <div class="info-overlay">
+                        <h4>Decoración para el Hogar</h4>
+                        <p>Transforma tus espacios con estas ideas simples y elegantes.</p>
+                        <div class="action-buttons">
+                            <button class="btn-action like"><i class="icon-heart"></i> Me gusta</button>
+                            <button class="btn-action save"><i class="icon-save"></i> Guardar</button>
+                            <button class="btn-action share"><i class="icon-share"></i> Compartir</button>
+                            <button class="btn-action comment"><i class="icon-comment"></i> Comentar</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="masonry-item" data-category="recetas">
-                <img src="https://i.pinimg.com/236x/b2/c3/d4/b2c3d4e5f6g7h8i9j0.jpg" alt="Recetas">
-                <div class="overlay">
-                    <p>Postres fáciles</p>
+
+
+                <div class="masonry-item" data-category="recetas">
+                    <img src="https://i.pinimg.com/236x/ae/09/5f/ae095fab4053db2fb9b7bf06e3ac183d.jpg" alt="Recetas">
+                    <div class="info-overlay">
+                        <h4>Recetas Fáciles</h4>
+                        <p>Deliciosas recetas para todos los días.</p>
+                        <div class="action-buttons">
+                            <button class="btn-action like"><i class="icon-heart"></i> Me gusta</button>
+                            <button class="btn-action save"><i class="icon-save"></i> Guardar</button>
+                            <button class="btn-action share"><i class="icon-share"></i> Compartir</button>
+                            <button class="btn-action comment"><i class="icon-comment"></i> Comentar</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="masonry-item" data-category="moda">
-                <img src="https://i.pinimg.com/236x/c3/d4/e5/c3d4e5f6g7h8i9j0k1.jpg" alt="Moda">
-                <div class="overlay">
-                    <p>Outfits modernos</p>
+                
+
+                <div class="masonry-item" data-category="moda">
+                    <img src="https://i.pinimg.com/236x/8d/8e/23/8d8e23f4c215c4aa24b2d10799000325.jpg" alt="Moda">
+                    <div class="info-overlay">
+                        <h4>Estilo de Moda</h4>
+                        <p>Inspírate con las últimas tendencias en moda.</p>
+                        <div class="action-buttons">
+                            <button class="btn-action like"><i class="icon-heart"></i> Me gusta</button>
+                            <button class="btn-action save"><i class="icon-save"></i> Guardar</button>
+                            <button class="btn-action share"><i class="icon-share"></i> Compartir</button>
+                            <button class="btn-action comment"><i class="icon-comment"></i> Comentar</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="masonry-item" data-category="fotografia">
-                <img src="https://i.pinimg.com/236x/d4/e5/f6/d4e5f6g7h8i9j0k1l2.jpg" alt="Fotografía">
-                <div class="overlay">
-                    <p>Composiciones artísticas</p>
+
+                <div class="masonry-item" data-category="moda">
+                    <img src="https://i.pinimg.com/236x/8d/8e/23/8d8e23f4c215c4aa24b2d10799000325.jpg" alt="Moda">
+                    <div class="info-overlay">
+                        <h4>Estilo de Moda</h4>
+                        <p>Inspírate con las últimas tendencias en moda.</p>
+                        <div class="action-buttons">
+                            <button class="btn-action like"><i class="icon-heart"></i> Me gusta</button>
+                            <button class="btn-action save"><i class="icon-save"></i> Guardar</button>
+                            <button class="btn-action share"><i class="icon-share"></i> Compartir</button>
+                            <button class="btn-action comment"><i class="icon-comment"></i> Comentar</button>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="masonry-item" data-category="moda">
+                    <img src="https://i.pinimg.com/236x/8d/8e/23/8d8e23f4c215c4aa24b2d10799000325.jpg" alt="Moda">
+                    <div class="info-overlay">
+                        <h4>Estilo de Moda</h4>
+                        <p>Inspírate con las últimas tendencias en moda.</p>
+                        <div class="action-buttons">
+                            <button class="btn-action like"><i class="icon-heart"></i> Me gusta</button>
+                            <button class="btn-action save"><i class="icon-save"></i> Guardar</button>
+                            <button class="btn-action share"><i class="icon-share"></i> Compartir</button>
+                            <button class="btn-action comment"><i class="icon-comment"></i> Comentar</button>
+                        </div>
+                    </div>
+                </div>
+
+                
             </div>
-            <!-- Agrega más imágenes según sea necesario -->
         </section>
     </main>
 
-    <footer class="explorar-footer">
-        <p>© 2024 Pinspire - Explora tus pasiones. Diseñado por MariiManguito</p>
+    <footer>
+        <p>© 2024 Pinspire - Comparte tus ideas. MariiManguito</p>
     </footer>
 </body>
 </html>
