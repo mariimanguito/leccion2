@@ -251,106 +251,174 @@ main {
 
 /* -----------------------------------------------------------------*/
 
-/* Botones de acción Explorar*/
+/* Explorar */
 
-
-/* Estilo General para la Sección de Filtros */
-section {
-    padding: 20px;
-    background-color: #fff;
-    border-bottom: 2px solid #f1f1f1;
-    text-align: center;
-}
-
-h3 {
-    font-size: 1.5rem;
-    color: #e60023;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-/* Botones de Filtros */
-.filter-buttons {
+/* Contenedor principal */
+.carousel-container {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Carrusel */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    scroll-snap-type: x mandatory;
+}
+
+.image-row {
+    display: flex;
+    scroll-behavior: smooth;
     gap: 10px;
 }
 
-.filter-buttons button {
-    background-color: #e60023; /* Rojo vibrante */
+.image-row img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+}
+
+/* Flechas de navegación */
+.arrow {
+    background-color: #333;
     color: white;
     border: none;
-    border-radius: 30px; /* Forma redondeada */
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
-}
-
-/* Efecto Hover */
-.filter-buttons button:hover {
-    background-color: #d1001c; /* Rojo más oscuro */
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
-    box-shadow: 0 5px 15px rgba(230, 0, 35, 0.3); /* Sombra atractiva */
-}
-
-/* Efecto Activo (Clic) */
-.filter-buttons button:active {
-    transform: scale(0.95); /* Reduce ligeramente el tamaño */
-    background-color: #b30017; /* Rojo aún más oscuro */
-}
-
-/* Botón Seleccionado (Estado Activo) */
-.filter-buttons button.selected {
-    background-color: #333; /* Cambia a negro */
-    color: white;
-    font-style: italic;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-
-.btn-action {
-    background-color: transparent;
-    border: none;
-    color: black; /* Texto negro por defecto */
-    font-size: 1.1rem; /* Tamaño más grande para mayor visibilidad */
-    margin-right: 10px;
-    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
-    gap: 5px;
-    transition: transform 0.2s ease-in-out, color 0.3s ease-in-out; /* Animaciones suaves */
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
 }
 
-.btn-action:hover {
-    transform: scale(1.2); /* Incremento en tamaño */
-    color: red; /* Cambia a rojo al pasar el ratón */
+.arrow.left {
+    left: 10px;
 }
 
-/* Estado seleccionado (active) */
-.btn-action:active {
-    transform: scale(0.9); /* Disminuye ligeramente para simular "presión" */
-    color: darkred; /* Cambia a un rojo más oscuro */
+.arrow.right {
+    right: 10px;
 }
 
-/* Íconos */
-.icon-heart::before {
-    content: "♥"; /* Corazón */
+.arrow:hover {
+    background-color: #555;
 }
 
-.icon-save::before {
-    content: "★"; /* Estrella */
+/* Deshabilitar botones para usuarios */
+.arrow:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
-.icon-share::before {
-    content: "↗"; /* Flecha compartida */
+/* -----------------------------------------------------------------*/
+
+/* Crear */
+
+
+/* Main Container */
+.main-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center; /* Centra horizontalmente el contenedor */
+    align-items: center; /* Centra verticalmente el contenedor */
+    
 }
 
-.icon-comment::before {
-    content: "💬"; /* Comentario */
+/* Create Board Section */
+.create-board {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.board-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.board-name-input,
+.board-description-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6b6b;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e55a5a;
+}
+
+/* Boards Section */
+.boards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.board-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.board-item {
+    width: 150px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.board-image {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.board-name {
+    font-size: 1rem;
+    color: #555;
+}
+
 
 
 /* -----------------------------------------------------------------*/
@@ -364,3 +432,7 @@ footer {
     font-size: 0.9rem;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
+/* -----------------------------------------------------------------*/
+
