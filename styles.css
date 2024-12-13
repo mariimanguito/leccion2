@@ -4,7 +4,9 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f8f8;
     color: #333;
+    overflow-x: hidden; /* Previne el scroll horizontal si el contenido se desborda */
 }
+
 
 /* -----------------------------------------------------------------*/
 
@@ -23,25 +25,32 @@ header {
 }
 
 h1 {
-    font-size: 1.8rem; /* Tamaño del texto */
-    margin: 0; /* Elimina el margen por defecto */
+    font-size: 1.8rem;
+    /* Tamaño del texto */
+    margin: 0;
+    /* Elimina el margen por defecto */
     font-family: 'Arial', sans-serif;
-    color: white; /* Color del título */
+    color: white;
+    /* Color del título */
 }
 
 /* Estilo para el logo y el texto */
 .logo-link {
     display: flex;
     align-items: center;
-    text-decoration: none; /* Eliminar subrayado */
-    color: white; /* Color del texto */
+    text-decoration: none;
+    /* Eliminar subrayado */
+    color: white;
+    /* Color del texto */
     font-family: 'Arial', sans-serif;
 }
 
 .logo {
-    width: 40px; /* Tamaño del logo */
+    width: 40px;
+    /* Tamaño del logo */
     height: auto;
-    margin-right: 10px; /* Espacio entre el logo y el texto */
+    margin-right: 10px;
+    /* Espacio entre el logo y el texto */
 }
 
 /* -----------------------------------------------------------------*/
@@ -70,7 +79,8 @@ nav a:hover {
 main {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 160px); /* Ajuste para header y footer */
+    min-height: calc(100vh - 160px);
+    /* Ajuste para header y footer */
     padding: 20px;
 }
 
@@ -172,11 +182,16 @@ main {
 
 .profile-page {
     display: flex;
-    justify-content: center; /* Centra horizontalmente el contenedor */
-    align-items: center; /* Centra verticalmente el contenedor */
-    min-height: 100vh; /* Ocupa toda la altura de la ventana */
-    padding: 20px; /* Espaciado interno para evitar bordes pegados */
-    background-color: #f8f8f8; /* Fondo para diferenciar el área */
+    justify-content: center;
+    /* Centra horizontalmente el contenedor */
+    align-items: center;
+    /* Centra verticalmente el contenedor */
+    min-height: 100vh;
+    /* Ocupa toda la altura de la ventana */
+    padding: 20px;
+    /* Espaciado interno para evitar bordes pegados */
+    background-color: #f8f8f8;
+    /* Fondo para diferenciar el área */
 }
 
 .profile-container {
@@ -186,7 +201,8 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     width: 100%;
-    text-align: left; /* Texto alineado a la izquierda */
+    text-align: left;
+    /* Texto alineado a la izquierda */
 }
 
 
@@ -196,9 +212,11 @@ main {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 500px; /* Tamaño fijo del contenedor */
+    max-width: 500px;
+    /* Tamaño fijo del contenedor */
     width: 100%;
-    text-align: left; /* El texto y contenido se alinea a la izquierda */
+    text-align: left;
+    /* El texto y contenido se alinea a la izquierda */
 }
 
 .profile-form-container h2 {
@@ -221,7 +239,8 @@ main {
 
 .profile-form label {
     font-weight: bold;
-    text-align: left; /* Mantiene alineación a la izquierda */
+    text-align: left;
+    /* Mantiene alineación a la izquierda */
     color: #555;
 }
 
@@ -352,9 +371,11 @@ main {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    justify-content: center; /* Centra horizontalmente el contenedor */
-    align-items: center; /* Centra verticalmente el contenedor */
-    
+    justify-content: center;
+    /* Centra horizontalmente el contenedor */
+    align-items: center;
+    /* Centra verticalmente el contenedor */
+
 }
 
 /* Create Board Section */
@@ -443,7 +464,8 @@ main {
 .gallery {
     padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Autoajusta las columnas */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Autoajusta las columnas */
     gap: 1.5rem;
     margin-top: 20px;
 }
@@ -453,29 +475,35 @@ main {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra para dar profundidad */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Sombra para dar profundidad */
     background: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Efecto de Hover */
 .gallery-item:hover {
-    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Más sombra para dar énfasis */
+    transform: scale(1.05);
+    /* Aumenta el tamaño al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Más sombra para dar énfasis */
 }
 
 /* Estilo para las imágenes */
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Hace que la imagen cubra su contenedor sin distorsionar */
-    border-radius: 10px; /* Bordes redondeados en la imagen */
+    object-fit: cover;
+    /* Hace que la imagen cubra su contenedor sin distorsionar */
+    border-radius: 10px;
+    /* Bordes redondeados en la imagen */
     transition: opacity 0.3s ease;
 }
 
 /* Efecto para las imágenes cuando el mouse pasa por encima */
 .gallery-item:hover img {
-    opacity: 0.85; /* Imagen más tenue cuando se hace hover */
+    opacity: 0.85;
+    /* Imagen más tenue cuando se hace hover */
 }
 
 /* Pie de foto */
@@ -485,7 +513,8 @@ main {
     left: 10px;
     right: 10px;
     padding: 0.5rem;
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    background: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
     color: #fff;
     text-align: center;
     font-size: 1rem;
@@ -503,11 +532,14 @@ main {
 /* Estilo para el panel de opciones pequeño */
 .options {
     position: absolute;
-    top: 10px; /* Ubicado en la esquina superior */
-    right: 10px; /* Alineado a la derecha */
+    top: 10px;
+    /* Ubicado en la esquina superior */
+    right: 10px;
+    /* Alineado a la derecha */
     display: flex;
     flex-direction: row;
-    gap: 0.5rem; /* Espacio entre los botones */
+    gap: 0.5rem;
+    /* Espacio entre los botones */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -519,7 +551,8 @@ main {
     color: white;
     border: none;
     padding: 0.3rem 0.5rem;
-    font-size: 1rem; /* Tamaño pequeño */
+    font-size: 1rem;
+    /* Tamaño pequeño */
     border-radius: 50%;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -540,169 +573,154 @@ main {
 
 /* -----------------------------------------------------------------*/
 
-/* ----------------------------------------------------------------- */
-/* Login - Estilo del formulario */
-.login-form-container {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
-    text-align: left;
-    margin: 0 auto;
+/* -----------------------------------------------------------------*/
+/* Login y Registro */
+
+/* Contenedor general */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f8f8f8;
 }
 
-.login-form-container h2 {
-    font-size: 1.8rem;
+/* Formulario */
+.auth-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-form h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #333;
 }
 
-.login-form-container p {
+.auth-form p {
     font-size: 1rem;
     color: #666;
     margin-bottom: 20px;
 }
 
-.login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.login-form label {
-    font-weight: bold;
-    text-align: left;
-    color: #555;
-}
-
-.login-form input {
+/* Campos del formulario */
+.auth-form input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
     color: #333;
     background-color: #f9f9f9;
-    transition: border-color 0.3s;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
 }
 
-.login-form input:focus {
+.auth-form input:focus {
     border-color: #e60023;
     outline: none;
     background-color: #fff;
 }
 
-.login-form button.submit-btn {
+.auth-form .submit-btn {
     background-color: #e60023;
     color: white;
-    padding: 15px;
+    padding: 12px 20px;
     font-size: 1rem;
-    font-weight: bold;
     border: none;
-    border-radius: 50px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 100%;
 }
 
-.login-form button.submit-btn:hover {
-    background-color: #b3001a;
+.auth-form .submit-btn:hover {
+    background-color: #bf001b;
 }
 
-/* Opciones adicionales para login */
-.options {
+/* Enlaces de opción para cambiar entre login y registro */
+.auth-options {
     margin-top: 20px;
+    font-size: 0.9rem;
 }
 
-.options p {
-    margin: 5px 0;
-    font-size: 0.9em;
-}
-
-.options a {
+.auth-options a {
     color: #e60023;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-.options a:hover {
+.auth-options a:hover {
     color: #bf001b;
 }
 
-/* ----------------------------------------------------------------- */
-
-/* Registro - Estilo del formulario */
-.register-form-container {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
-    text-align: left;
-    margin: 0 auto;
-}
-
-.register-form-container h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.register-form-container p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.register-form {
+/* -----------------------------------------------------------------*/
+/* Contenedor principal de la autenticación */
+.auth-container {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.register-form label {
-    font-weight: bold;
-    text-align: left;
-    color: #555;
-}
-
-.register-form input {
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Usamos el 100% de la altura de la ventana */
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-    color: #333;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s;
+    margin: 0; /* Elimina márgenes adicionales */
+    padding: 0; /* Elimina rellenos adicionales */
+    background-color: #f8f8f8;
+    box-sizing: border-box; /* Asegura que el padding no cause overflow */
 }
 
-.register-form input:focus {
-    border-color: #e60023;
-    outline: none;
+/* Mensaje de éxito */
+.auth-message {
     background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box; /* Evita el desbordamiento de los bordes */
 }
 
-.register-form button.submit-btn {
+/* Título del mensaje */
+.auth-message h2 {
+    font-size: 2rem;
+    color: #2d2d2d;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Párrafo con el mensaje */
+.auth-message p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Botón de redirección */
+.submit-btn {
     background-color: #e60023;
     color: white;
-    padding: 15px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
+    padding: 15px 30px;
     border-radius: 50px;
+    border: none;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
+    font-family: 'Arial', sans-serif;
 }
 
-.register-form button.submit-btn:hover {
+/* Efecto hover para el botón */
+.submit-btn:hover {
     background-color: #b3001a;
 }
 
-/* ----------------------------------------------------------------- */
 
 
 /* -----------------------------------------------------------------*/
@@ -710,7 +728,8 @@ main {
 
 /* Footer */
 footer {
-    text-align: center; /* Centra el texto en el footer */
+    text-align: center;
+    /* Centra el texto en el footer */
     background-color: #591620;
     color: white;
     padding: 15px 20px;
@@ -720,4 +739,3 @@ footer {
 
 
 /* -----------------------------------------------------------------*/
-
