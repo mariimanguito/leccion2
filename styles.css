@@ -739,6 +739,73 @@ footer {
 
 
 /* -----------------------------------------------------------------*/
+
+/* Variables de colores */
+:root {
+    --color-fondo: #ffffff; /* Fondo claro */
+    --color-texto: #000000; /* Texto negro */
+}
+
+body:has(#theme-switch:checked) {
+    --color-fondo: #1a1a1a; /* Fondo oscuro */
+    --color-texto: #f1f1f1; /* Texto blanco */
+}
+
+/* Aplicar los colores */
+body, main, section {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo del botón flotante */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.theme-toggle input {
+    display: none; /* Ocultar checkbox */
+}
+
+.toggle-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-btn span {
+    font-size: 1.5em;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#theme-switch:not(:checked) + .toggle-btn span:first-child {
+    opacity: 1; /* 🌙 aparece cuando está claro */
+}
+
+#theme-switch:checked + .toggle-btn span:last-child {
+    opacity: 1; /* ☀️ aparece cuando está oscuro */
+}
+
+.toggle-btn:hover {
+    background-color: #444;
+    color: #f1f1f1;
+}
+
+
+
+
 /* -----------------------------------------------------------------*/
 /* Responsivos */
 
